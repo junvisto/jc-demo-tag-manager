@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GTM Demo Site</title>
+
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');
+</script>
+<!-- End Google Tag Manager -->
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background: #f4f6f8;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+button {
+  padding: 10px 16px;
+  margin-top: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+input {
+  padding: 8px;
+  margin-top: 8px;
+  width: 250px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<h1>📊 GTM Analytics Demo Site</h1>
+
+<!-- Signup Button -->
+<div class="card">
+  <h2>Signup Event</h2>
+  <button id="signupBtn">Fake Signup</button>
+</div>
+
+<!-- Add to Cart -->
+<div class="card">
+  <h2>Ecommerce Demo</h2>
+  <button id="cartBtn">Add Item To Cart</button>
+</div>
+
+<!-- Form Submission -->
+<div class="card">
+  <h2>Lead Form</h2>
+  <form id="leadForm">
+    <input type="text" placeholder="Enter Email" required />
+    <br/>
+    <button type="submit">Submit Lead</button>
+  </form>
+</div>
+
+<!-- External Link -->
+<div class="card">
+  <h2>External Link Tracking</h2>
+  <a href="https://www.google.com" target="_blank" id="externalLink">
+    Visit Google
+  </a>
+</div>
+
+<!-- Scroll Section -->
+<div class="card" style="height:1000px;">
+  <h2>Scroll Tracking Area</h2>
+  <p>Scroll down to trigger scroll event tracking.</p>
+</div>
+
+<script>
+
+// Signup Button
+document.getElementById('signupBtn').addEventListener('click', function() {
+  window.dataLayer.push({
+    event: "sign_up",
+    method: "demo_button"
+  });
+  alert("Signup event pushed!");
+});
+
+// Add To Cart
+document.getElementById('cartBtn').addEventListener('click', function() {
+  window.dataLayer.push({
+    event: "add_to_cart",
+    item_name: "Demo Product",
+    price: 29.99
+  });
+  alert("Add to cart event pushed!");
+});
+
+// Lead Form Submit
+document.getElementById('leadForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  window.dataLayer.push({
+    event: "generate_lead",
+    form_name: "demo_lead_form"
+  });
+
+  alert("Lead submitted!");
+});
+
+// External Link Click
+document.getElementById('externalLink').addEventListener('click', function() {
+  window.dataLayer.push({
+    event: "external_link_click",
+    destination: "google.com"
+  });
+});
+
+// Scroll Tracking
+window.addEventListener('scroll', function() {
+  let scrollPercent = Math.round(
+    (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+  );
+
+  if (scrollPercent > 50 && !window.scrollTracked) {
+    window.scrollTracked = true;
+
+    window.dataLayer.push({
+      event: "scroll_50_percent"
+    });
+  }
+});
+
+</script>
+
+</body>
+</html>
