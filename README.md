@@ -13,8 +13,8 @@ When measuring effectiveness of your site, you need analytics tools.
 
 
 
-**This is a demo site hosted on GitHub Pages. There’s no backend—just a simple website so we can focus purely on analytics**
+**This is a demo site hosted on GitHub. There’s no backend. Just a dummy website so we can focus purely on GA and GTM**
 
 
-https://github.com/user-attachments/assets/3fae4e0c-cb02-4d42-91ef-ea71312a2036
+https://github.com/user-attachments/assets/92dea783-c68f-41e8-b420-6cbdd7f73b72
 
