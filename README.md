@@ -14,7 +14,7 @@ When measuring effectiveness of your site, you need analytics tools.
 
 
 
-
+My demo website: https://junvisto.github.io/jc-demo-tag-manager/
 **This is a demo site hosted on GitHub. There’s no backend. Just a dummy website so we can focus purely on GA and GTM**
 
 
