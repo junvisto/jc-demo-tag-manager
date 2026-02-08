@@ -1,3 +1,5 @@
+**The purpose of this project is to understand web analytics using Google Analytics and Google Tag Manager**
+
 Tag manager:
 
 When measuring effectiveness of your site, you need analytics tools.
