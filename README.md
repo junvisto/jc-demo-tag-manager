@@ -1,4 +1,4 @@
-**The purpose of this project is to understand web analytics using Google Analytics and Google Tag Manager**
+**The purpose of this project is to understand how Google Analytics and Google Tag Manager work with each other in Web Analytic**
 
 Tag manager:
 
